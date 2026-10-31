@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hosting — QuizUp Live</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">Q</span>
+      QuizUp Live
+    </a>
+    <span class="badge"><span class="badge-dot live"></span> Host console</span>
+  </nav>
+
+  <main class="page">
+    <div class="wrap" id="loadingView">
+      <div class="card center-text">
+        <div class="row" style="justify-content:center;"><span class="spinner"></span></div>
+        <p>Connecting to your room…</p>
+      </div>
+    </div>
+
+    <!-- LOBBY -->
+    <div class="wrap" id="lobbyView" style="display:none;">
+      <div class="card" style="margin-bottom: 20px;">
+        <span class="eyebrow" id="lobbyQuizTitle">Quiz</span>
+        <div class="marquee">
+          <div class="marquee-label">Room code</div>
+          <div class="marquee-code" id="roomCodeDisplay">------</div>
+          <div class="marquee-url">Players go to <strong id="joinUrlText"></strong> and enter this code</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="spread" style="margin-bottom: 14px;">
+          <h3 style="margin:0;">Lobby <span class="muted" id="playerCountLabel">(0 players)</span></h3>
+          <button class="btn btn--primary" id="startBtn" disabled>Start game</button>
+        </div>
+        <p class="hint" style="margin-bottom: 14px;">Players join a team by typing any team code — the first person to use a code creates that team, and anyone else with the same code joins it.</p>
+        <div id="teamChips" class="chip-grid"></div>
+        <div id="lobbyEmpty" class="empty-state" style="margin-top:16px;">Waiting for players to join…</div>
+      </div>
+    </div>
+
+    <!-- QUESTION -->
+    <div class="wrap wrap--wide" id="questionView" style="display:none;">
+      <div class="card">
+        <div class="spread" style="margin-bottom: 10px;">
+          <span class="badge" id="questionProgressBadge">Question 1 / 5</span>
+          <div class="ring-wrap">
+            <svg viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="44"></circle>
+              <circle class="ring-fg" id="hostRing" cx="50" cy="50" r="44"></circle>
+            </svg>
+            <div class="ring-number" id="hostRingNumber">20</div>
+          </div>
+        </div>
+        <h2 id="hostQuestionText">Question text</h2>
+        <div class="answer-grid" id="hostAnswerGrid"></div>
+
+        <hr class="divider" />
+
+        <div class="spread">
+          <span class="muted" id="answerProgressLabel">0 of 0 answered</span>
+          <button class="btn btn--secondary" id="revealBtn">Reveal answer now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVEAL -->
+    <div class="wrap wrap--wide" id="revealView" style="display:none;">
+      <div class="card" style="margin-bottom:20px;">
+        <span class="badge">Results</span>
+        <h2 id="revealQuestionText" style="margin-top:8px;">Question text</h2>
+        <div id="revealTally" class="stack"></div>
+      </div>
+      <div class="card">
+        <div class="spread">
+          <h3 style="margin:0;">Leaderboard</h3>
+          <button class="btn btn--primary" id="nextBtn">Next question</button>
+        </div>
+        <div id="revealLeaderboard" style="margin-top:14px;"></div>
+      </div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div class="wrap" id="gameOverView" style="display:none;">
+      <div class="card center-text">
+        <span class="eyebrow">Final results</span>
+        <h2>🎉 Game over!</h2>
+        <div class="podium" id="finalPodium"></div>
+        <div id="finalTeamBoard" style="text-align:left; margin-top: 20px;"></div>
+        <a class="btn btn--ghost" href="/host.html" style="margin-top: 20px;">Back to your quizzes</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/host-room.js"></script>
+</body>
+</html>

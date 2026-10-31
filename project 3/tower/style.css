@@ -1,0 +1,12 @@
+body { margin: 0; background: #0b0d26; display: flex; flex-direction: column; align-items: center; font-family: 'Courier New', monospace; color: white; }
+#game-container { position: relative; width: 400px; margin-top: 20px; }
+#game-board { position: relative; width: 400px; height: 600px; background: linear-gradient(to bottom, #000428, #004e92); overflow: hidden; border: 2px solid #555; }
+#game-board::before { content: ""; position: absolute; width: 100%; height: 100%; background: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px); background-size: 50px 50px; opacity: 0.3; }
+.block { position: absolute; height: 30px; background: #00d4ff; box-shadow: 0 0 10px #00d4ff; border-radius: 4px; transition: width 0.1s ease-out; }
+#ui-overlay { display: flex; justify-content: space-between; padding: 10px; background: rgba(0,0,0,0.5); color: #00d4ff; border-radius: 5px; margin-bottom: 5px; }
+#restart-btn { background: transparent; border: 1px solid #00d4ff; color: #00d4ff; cursor: pointer; }
+#restart-btn:hover { background: #00d4ff; color: #000; }
+.hidden { display: none !important; }
+#game-over-modal { position: absolute; top: 200px; left: 50px; width: 300px; background: rgba(0,0,0,0.9); border: 2px solid #ff007f; text-align: center; padding: 20px; z-index: 100; }
+.feedback { position: absolute; color: white; font-weight: bold; pointer-events: none; animation: floatUp 0.5s forwards; }
+@keyframes floatUp { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-30px); } }

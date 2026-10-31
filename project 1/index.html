@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything delivered in minutes | Blinkit</title>
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Blinkit-yellow-rounded.svg/250px-Blinkit-yellow-rounded.svg.png" />
+    <style>
+        * {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding: 25px 20px;
+  border-right: 1px solid black;
+}
+
+.headerAddress {
+  padding: 20px 20px;
+}
+
+.headerAddress h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.headerAddress p {
+  font-size: 14px;
+}
+
+.searchBox {
+  flex-grow: 1;
+  background-color: #f8f8f8;
+  display: flex;
+  border-radius: 15px;
+  border: 1px solid #f4f4f4;
+}
+.searchBox button {
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.searchBox input {
+  flex-grow: 1;
+  border: none;
+
+  background-color: transparent;
+}
+.searchBox input:focus {
+  outline: none;
+}
+
+.HeaderBtn {
+  display: flex;
+  gap: 50px;
+  margin-right: 40px;
+}
+
+.HeaderBtn button {
+  font-size: 16px;
+  padding: 20px;
+  background: transparent;
+  border: none;
+}
+.HeaderBtn button:last-child {
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: rgb(12, 131, 31);
+}
+
+.bannerSection {
+  max-width: 1280px;
+  margin: 0px auto;
+}
+.bannerSection img {
+  width: 100%;
+}
+
+.orderBanner {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.orderBannerItems {
+  flex-basis: 28%;
+  margin: 1%;
+}
+.orderBannerItems img {
+  width: 100%;
+}
+
+
+.categorySection{
+  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.categoryItems{
+  flex-basis: 10%;
+}
+
+.categoryItems img{
+  width: 100%;
+}
+
+.productSection{
+  max-width: 1280px;
+  margin: auto;
+  padding: 30px 0px 0px 0px;
+}
+
+.headingRow{
+  width: 100%;
+  margin: auto;                    
+  display: flex;
+  justify-content: space-between;
+}
+
+.headingRow h2{
+  font-size: 22px;
+}
+
+.headingRow a{
+  color: #328839;
+  font-size: 18px;
+}
+
+.productRow{
+  width: 100%;
+  margin: 30px 0px 0px 0px;            
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.productItems{
+  flex-basis: 15%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px 2px #ccc;
+  border: 1px solid #ccc;
+}
+
+.productImg{
+  text-align: center;
+  padding: 15px;
+}
+
+
+.productImg p{
+  background-color: #f8f8f8;
+  display: flex;
+  padding: 2px;
+  width: 60px;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  text-align: left;
+}
+
+.productContent{
+  padding: 15px;
+  padding-top: 0px;
+}
+
+.productContent h3{
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.productContent p{
+  font-size: 14px;
+  color: #848080;
+}
+
+.btn-price-outer{
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-price-outer button{
+  border: 1px solid #328839;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: #328839;
+}
+
+
+
+
+footer{
+  padding: 40px 0px 0px 0px;
+}
+
+.footer-mid{
+  max-width: 1280px;
+  margin: auto;
+}
+
+.footer-mid-row1{
+  width: 100%;
+  display: flex;
+  gap: 40px;
+}
+
+.footer-mid-row1-left{
+  flex-basis: 30%;
+}
+.footer-mid-row1-left{
+  margin-bottom: 20px;
+}
+
+.useFullLinks{
+  display: flex;
+}
+
+.useFullLinks ul{
+  flex-basis: 33%;
+  list-style: none;
+}
+
+.useFullLinks ul li a{
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  color: rgb(102, 102, 102);
+}
+
+
+
+.footer-mid-row1-right{
+  flex-basis: 70%;
+}
+
+.categoriesHeadingRow{
+  display: flex;
+}
+
+.categoriesHeadingRow h3{
+  margin-bottom: 20px;
+}
+
+
+footer {
+  background: #fff;
+  color: #222;
+  padding: 48px 0 0 0;
+  font-size: 15px;
+}
+
+.footer-mid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.footer-mid-row1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 54px;
+  margin-bottom: 30px;
+}
+
+.footer-mid-row1-left h3,
+.categoriesHeadingRow h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.useFullLinks {
+  display: flex;
+  gap: 48px;
+}
+
+.useFullLinks ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.useFullLinks ul li {
+  margin-bottom: 10px;
+}
+
+.useFullLinks ul li a {
+  color: #222;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.useFullLinks ul li a:hover {
+  color: #43a047;
+  text-decoration: underline;
+}
+
+.categoriesHeadingRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.categoriesHeadingRow a {
+  color: #388e3c;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.categoriesHeadingRow a:hover {
+  text-decoration: underline;
+}
+
+.footer-mid-row1-right {
+  min-width: 250px;
+}
+
+.categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.categories-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.categories-list ul li {
+  margin-bottom: 8px;
+  color: #222;
+  font-size: 15px;
+}
+
+.footer-bottom {
+  background: #fafafa;
+  margin-top: 38px;
+  padding: 18px 0 0 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.footer-bottom span {
+  color: #444;
+}
+
+.footer-apps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-apps .app-store {
+  height: 32px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer-social {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-social .social-icon {
+  background: #fff;
+  color: #222;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  border: 1px solid #ddd;
+  transition: border-color 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.footer-social .social-icon:hover {
+  border-color: #388e3c;
+  color: #388e3c;
+}
+
+
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 575px) {
+  header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 15px;
+  }
+  .headerLeft {
+    justify-content: center;
+  }
+  .logo {
+    padding: 10px;
+  }
+  .headerAddress {
+    padding: 10px;
+  }
+  .headerAddress p {
+    font-size: 12px;
+  }
+  .headerAddress h3 {
+    font-size: 15px;
+  }
+  .searchBox button {
+    padding: 10px;
+  }
+
+  .HeaderBtn {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    margin-right: 0px;
+    justify-content: center;
+    bottom: 0px;
+  }
+
+  .bannerSection {
+    display: none;
+  }
+  .orderBanner {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .categoryItems{
+    flex-basis: 25%;
+  }
+
+  .productSection{
+    padding: 0px 10px;
+  }
+  .productItems{
+    flex-basis: 49%;
+  }
+
+  .footer{
+    padding-top: 0px;
+  }
+  .footer-mid-row1{
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="headerLeft">
+            <div class="logo">
+                <a href="#">
+                    <svg width="134" height="30" viewBox="0 0 114 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.3342 7.186C16.2619 7.186 17.9832 7.66644 19.4978 8.62732C21.0262 9.57447 22.2242 10.9197 23.0917 12.663C23.9316 14.3377 24.3516 16.3075 24.3516 18.5724C24.3516 20.7687 23.9316 22.7316 23.0917 24.4612C22.2517 26.1908 21.0675 27.5429 19.5391 28.5175C17.9969 29.5058 16.2619 30 14.3342 30C12.9297 30 11.6078 29.7117 10.3685 29.1352C9.12927 28.5587 8.06901 27.7488 7.18775 26.7056V29.4852H0V0H7.18775V10.4598C8.06901 9.41661 9.12927 8.61359 10.3685 8.05079C11.6078 7.47426 12.9297 7.186 14.3342 7.186ZM12.1861 24.0494C13.2051 24.0494 14.1139 23.8161 14.9125 23.3493C15.7112 22.8826 16.3377 22.2306 16.7921 21.3933C17.2465 20.5697 17.4737 19.6294 17.4737 18.5724C17.4737 17.5429 17.2465 16.6095 16.7921 15.7721C16.3377 14.9348 15.7112 14.2828 14.9125 13.8161C14.1139 13.3493 13.2051 13.116 12.1861 13.116C11.2223 13.116 10.3617 13.3493 9.60432 13.8161C8.84699 14.269 8.2549 14.9073 7.82804 15.731C7.40118 16.5683 7.18775 17.5154 7.18775 18.5724C7.18775 19.6294 7.40118 20.5765 7.82804 21.4139C8.2549 22.2375 8.84699 22.8826 9.60432 23.3493C10.3617 23.8161 11.2223 24.0494 12.1861 24.0494Z"
+                            fill="#F8CB46"></path>
+                        <path d="M25.3356 29.4852V0H32.5233V29.4852H25.3356Z" fill="#F8CB46"></path>
+                        <path d="M34.5607 29.4852V7.68016H41.7071V29.4852H34.5607Z" fill="#F8CB46"></path>
+                        <path
+                            d="M57.2319 7.186C58.7603 7.186 60.1372 7.5429 61.3627 8.25669C62.5882 8.95676 63.5521 9.94509 64.2544 11.2217C64.9291 12.512 65.2664 13.9739 65.2664 15.6074V29.4852H58.4092V17.2135C58.4092 16.4173 58.2508 15.7104 57.9341 15.0927C57.6312 14.4612 57.1974 13.9739 56.6329 13.6307C56.0821 13.2876 55.4349 13.116 54.6914 13.116C53.9891 13.116 53.3419 13.2876 52.7498 13.6307C52.1577 13.9602 51.6965 14.4132 51.366 14.9897C51.0218 15.5388 50.8496 16.1839 50.8496 16.9252L50.8083 29.4852H43.6619V7.68016H50.8083V10.1716C51.483 9.23816 52.3849 8.51064 53.5141 7.98902C54.6432 7.45367 55.8824 7.186 57.2319 7.186Z"
+                            fill="#F8CB46"></path>
+                        <path
+                            d="M81.0597 17.2135L89.1769 29.4852H81.0597L76.3091 21.7639L74.1198 24.2965V29.4852H66.932V0H74.1198V16.2869L81.0184 7.68016H89.1356L81.0597 17.2135Z"
+                            fill="#F8CB46"></path>
+                        <path d="M34.5569 0.00232667H41.7267V5.59207H34.5569V0.00232667Z" fill="#F8CB46"></path>
+                        <path d="M90.3176 29.4198V7.61479H97.464V29.4198H90.3176Z" fill="#54B226"></path>
+                        <path
+                            d="M112.575 23.2634L114 27.855C113.353 28.4727 112.534 28.9737 111.542 29.3581C110.564 29.7424 109.607 29.9346 108.671 29.9346C107.322 29.9346 106.117 29.6395 105.057 29.0492C103.996 28.4452 103.17 27.6079 102.578 26.5372C101.986 25.494 101.69 24.2929 101.69 22.9339V13.3183H98.819V7.61479H101.69V0.00241089H108.547V7.61479H113.071V13.3183H108.547V21.6161C108.547 22.3162 108.733 22.8859 109.105 23.3251C109.477 23.7644 109.952 23.984 110.53 23.984C110.943 23.984 111.329 23.9223 111.687 23.7987C112.045 23.6752 112.341 23.4967 112.575 23.2634Z"
+                            fill="#54B226"></path>
+                        <path d="M90.2609 0.00241089H97.4307V5.59215H90.2609V0.00241089Z" fill="#54B226"></path>
+                    </svg></a>
+            </div>
+            <div class="headerAddress">
+                <h3>Dilivery in 8 minutes</h3>
+                <p>RWWW+MFG, Vidhan Sabha Marg</p>
+            </div>
+        </div>
+        <form class="searchBox">
+            <button><i class="fa-solid fa-magnifying-glass">Search here</i></button>
+            <input type="text" />
+        </form>
+        <div class="HeaderBtn">
+            <button>Login</button>
+            <button><i class="fa-solid fa-cart-shopping"></i>My Cart</button>
+
+        </div>
+    </header>
+
+    <section class="bannerSection">
+        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg"
+            alt="">
+    </section>
+
+    <section class="orderBanner">
+        <div class="orderBannerItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg"
+                alt="">
+        </div>
+        <div class="orderBannerItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg"
+                alt="">
+        </div>
+        <div class="orderBannerItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-03/babycare-WEB.jpg"
+                alt="">
+        </div>
+    </section>
+
+    <section class="categorySection">
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-3_9.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-6_5.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-8_4.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=7metadata=none,w=270/layout-engine/2022-11/Slice-9_3.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-10.png" alt=""> 
+        </div>
+
+
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-12.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-13.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-14.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-15.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-16.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-17.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-18.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-19.png" alt="">
+        </div>
+        <div class="categoryItems">
+            <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png" alt="">
+        </div>
+    </section>
+
+    <section class="productSection">
+
+        <div class="headingRow">
+            <h2>Dairy, Bread & Eggs</h2>
+            <a>see all</a>
+        </div>
+
+        <div class="productRow">
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/628c97e0-5ed4-425d-a667-1d3bfa6f0bde.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Taaza Toned Milk</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/5734b087-3ad9-485f-bbe2-52079cd9e35d.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Taaza Toned Milk</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/3af56c86-9a93-4d0c-a8d5-cf38493e4120.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Masti Spiced ButterMilk</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/613787ac-f983-4cfb-b534-e219c8d47b39.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Butter</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e7023096-622d-4e2e-9c2c-a7689262c36f.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Masti Dahi</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e47341cd-d920-4c0a-a9f2-20d663976cd0.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Amul Yogurt</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="productSection">
+
+        <div class="headingRow">
+            <h2>Rolling paper & tobacco</h2>
+            <a>see all</a>
+        </div>
+
+        <div class="productRow">
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/0f8ebd88-7b67-4542-bda1-87f8182d767d.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Mazo Sandwich Biscuit</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/500d636d-e59e-4835-a0e5-3d8e7ad26d3b.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Stash-Pro Ripper Tipper</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a6eb6af-8143-4195-a788-c350255a8e1e.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Bongchie Mozo 3-in-1</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/8d385b40-e78b-434a-962d-50ba667891bf.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Thin Pre-Rolling Paper</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/71ddb6c0-c8d8-47fb-80d6-e89bce9fd498.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Bongchie Perfect Roll</h3>+
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/e9adf1c2-104e-4a39-a51f-c19a7db68e55.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Stash-Pro</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="productSection">
+
+        <div class="headingRow">
+            <h2>Snacks & Munchies</h2>
+            <a>see all</a>
+        </div>
+
+        <div class="productRow">
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/2a55bb8b-bf09-454b-9233-cc00404c6a5c.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Beanly Choco Hazelnut Dibs</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/4a2d5e14-4425-4d2d-8958-6d51c6fd73d9.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Millet Chips</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/fe70ea27-8ead-446d-be12-f8f8d45c4d0e.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Fresho Cheese Balls</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/815e8dd5-37e9-4dc2-b3f7-ded08e12a7ab.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Pringles</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/42d8cc6c-1ed3-43d1-a0a2-588d5f2a4337.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>Kettle Brand Potato Chips</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="productItems">
+                <div class="productImg">
+                <img width="70%" src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/da/cms-assets/cms/product/c9db4298-29bf-4536-b5f3-06dadbd50130.png" alt="">
+                <p>
+                    <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=90/assets/eta-icons/15-mins.png" alt="" width="15"/>
+                    8 min
+                </p>
+                </div>
+                <div class="productContent">
+                    <h3>LC Protein Chef Baked Bikaneri Bhujia</h3>
+                    <p>500 ml</p>
+                    <div class="btn-price-outer">
+                        <b>₹29</b>
+                        <button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+<footer>
+  <div class="footer-mid">
+    <div class="footer-mid-row1">
+      <div class="footer-mid-row1-left">
+        <h3>Useful Links</h3>
+        <div class="useFullLinks">
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Partner</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li><a href="#">Seller</a></li>
+            <li><a href="#">Warehouse</a></li>
+            <li><a href="#">Deliver</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Bistro</a></li>
+            <li><a href="#">District</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-mid-row1-right">
+        <div class="categoriesHeadingRow">
+          <h3>Categories</h3>
+          <a href="#">see all</a>
+        </div>
+        <div class="categories-list">
+          <ul>
+            <li>Vegetables & Fruits</li>
+            <li>Cold Drinks & Juices</li>
+            <li>Bakery & Biscuits</li>
+            <li>Dry Fruits, Masala & Oil</li>
+            <li>Paan Corner</li>
+            <li>Pharma & Wellness</li>
+            <li>Personal Care</li>
+            <li>Kitchen & Dining</li>
+            <li>Stationery Needs</li>
+            <li>Print Store</li>
+          </ul>
+          <ul>
+            <li>Dairy & Breakfast</li>
+            <li>Instant & Frozen Food</li>
+            <li>Sweet Tooth</li>
+            <li>Sauces & Spreads</li>
+            <li>Organic & Premium</li>
+            <li>Cleaning Essentials</li>
+            <li>Pet Care</li>
+            <li>Fashion & Accessories</li>
+            <li>Books</li>
+            <li>E-Gift Cards</li>
+          </ul>
+          <ul>
+            <li>Munchies</li>
+            <li>Tea, Coffee & Milk Drinks</li>
+            <li>Atta, Rice & Dal</li>
+            <li>Chicken, Meat & Fish</li>
+            <li>Baby Care</li>
+            <li>Home Furnishing & Decor</li>
+            <li>Beauty & Cosmetics</li>
+            <li>Electronics & Electricals</li>
+            <li>Toys & Games</li>
+            <li>Rakhi Gifts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© Blink Commerce Private Limited, 2016-2025</span>
+      <div class="footer-apps">
+        <span>Download App</span>
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" class="app-store">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Play Store" class="app-store">
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-threads"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Join a game — QuizUp Live</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">Q</span>
+      QuizUp Live
+    </a>
+    <a class="btn btn--ghost btn--sm" href="/">Home</a>
+  </nav>
+
+  <main class="page">
+
+    <!-- JOIN FORM -->
+    <div class="wrap wrap--narrow" id="joinView">
+      <div class="card">
+        <span class="eyebrow">Join a game</span>
+        <h2>Enter your details</h2>
+        <div id="joinError" class="error-banner"></div>
+
+        <div class="field">
+          <label for="roomCodeInput">Room code</label>
+          <input type="text" id="roomCodeInput" placeholder="e.g. 7KQTMX" maxlength="8" style="font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;" />
+        </div>
+        <div class="field">
+          <label for="playerNameInput">Your name</label>
+          <input type="text" id="playerNameInput" placeholder="How should we show you on the leaderboard?" maxlength="24" />
+        </div>
+        <div class="field">
+          <label for="teamCodeInput">Team code</label>
+          <input type="text" id="teamCodeInput" placeholder="e.g. FALCONS" maxlength="20" />
+          <p class="hint">Use a code your teammates already picked to join them, or make up a new one to start a team.</p>
+        </div>
+
+        <button class="btn btn--primary btn--full" id="joinBtn">Join game</button>
+      </div>
+    </div>
+
+    <!-- WAITING IN LOBBY -->
+    <div class="wrap wrap--narrow" id="waitingView" style="display:none;">
+      <div class="card center-text">
+        <span class="eyebrow" id="waitingQuizTitle">Quiz</span>
+        <h2>You're in! 🎉</h2>
+        <p>Playing as <strong id="waitingPlayerName"></strong> on team <strong id="waitingTeamName"></strong></p>
+        <div class="row" style="justify-content:center; margin-top: 20px;"><span class="spinner"></span></div>
+        <p class="muted" style="margin-top: 10px;">Waiting for the host to start the game…</p>
+      </div>
+    </div>
+
+    <!-- QUESTION -->
+    <div class="wrap" id="questionView" style="display:none;">
+      <div class="card">
+        <div class="spread" style="margin-bottom: 10px;">
+          <span class="badge" id="pQuestionProgress">Question 1 / 5</span>
+          <div class="ring-wrap">
+            <svg viewBox="0 0 100 100">
+              <circle class="ring-bg" cx="50" cy="50" r="44"></circle>
+              <circle class="ring-fg" id="pRing" cx="50" cy="50" r="44"></circle>
+            </svg>
+            <div class="ring-number" id="pRingNumber">20</div>
+          </div>
+        </div>
+        <h2 id="pQuestionText">Question text</h2>
+        <div class="answer-grid" id="pAnswerGrid"></div>
+      </div>
+    </div>
+
+    <!-- ANSWERED / WAITING FOR REVEAL -->
+    <div class="wrap wrap--narrow" id="answeredView" style="display:none;">
+      <div class="card center-text">
+        <div id="answerFeedbackIcon" style="font-size: 2.6rem;">⏳</div>
+        <h2 id="answerFeedbackTitle">Answer locked in!</h2>
+        <p id="answerFeedbackSub">Waiting for other players…</p>
+      </div>
+    </div>
+
+    <!-- REVEAL -->
+    <div class="wrap wrap--narrow" id="revealView" style="display:none;">
+      <div class="card center-text">
+        <div id="revealIcon" style="font-size: 2.6rem;">✅</div>
+        <h2 id="revealTitle">Correct!</h2>
+        <p id="revealSub">+950 points</p>
+        <hr class="divider" />
+        <p class="muted" style="margin-bottom: 4px;">Your team</p>
+        <h3 id="revealTeamScore" style="margin:0;">0 pts</h3>
+      </div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div class="wrap wrap--narrow" id="gameOverView" style="display:none;">
+      <div class="card center-text">
+        <span class="eyebrow">Final results</span>
+        <h2>🏁 That's a wrap!</h2>
+        <p class="muted" style="margin-bottom: 4px;">Your team finished</p>
+        <h1 id="finalTeamRank" style="margin: 0 0 20px;">1st</h1>
+        <div id="finalPersonalScore" class="muted"></div>
+        <div id="finalTeamBoard" style="text-align:left; margin-top: 20px;"></div>
+        <a class="btn btn--ghost" href="/play.html" style="margin-top: 20px;">Join another game</a>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/util.js"></script>
+  <script src="/js/play.js"></script>
+</body>
+</html>

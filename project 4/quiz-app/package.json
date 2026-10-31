@@ -1,0 +1,19 @@
+{
+  "name": "quizup-live",
+  "version": "1.0.0",
+  "description": "A real-time, team-based quiz game. Host a quiz, share a room code, players join teams with a team code, and everyone competes live.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "nanoid": "^3.3.7",
+    "socket.io": "^4.7.5"
+  },
+  "license": "MIT"
+}

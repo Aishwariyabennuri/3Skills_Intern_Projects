@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Host a quiz — QuizUp Live</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="top-nav">
+    <a class="brand" href="/">
+      <span class="brand-mark">Q</span>
+      QuizUp Live
+    </a>
+    <a class="btn btn--ghost btn--sm" href="/">Home</a>
+  </nav>
+
+  <main class="page">
+    <div class="wrap">
+
+      <section class="card" style="margin-bottom: 28px;">
+        <span class="eyebrow">Your quizzes</span>
+        <div class="spread" style="margin-bottom: 18px;">
+          <h2 style="margin:0;">Ready to host</h2>
+          <button class="btn btn--secondary btn--sm" id="newQuizBtn">+ New quiz</button>
+        </div>
+        <div id="quizList" class="stack"></div>
+      </section>
+
+      <section class="card" id="builderCard" style="display:none;">
+        <span class="eyebrow">Quiz builder</span>
+        <h2 id="builderHeading">New quiz</h2>
+        <div id="builderError" class="error-banner"></div>
+
+        <div class="field">
+          <label for="quizTitle">Quiz title</label>
+          <input type="text" id="quizTitle" placeholder="e.g. Friday Night Pop Culture" maxlength="120" />
+        </div>
+        <div class="field">
+          <label for="quizDesc">Description <span class="muted">(optional)</span></label>
+          <input type="text" id="quizDesc" placeholder="A one-line description for your own reference" maxlength="200" />
+        </div>
+
+        <hr class="divider" />
+
+        <div id="questionsWrap"></div>
+
+        <button class="btn btn--ghost" id="addQuestionBtn" type="button" style="margin-bottom: 20px;">+ Add question</button>
+
+        <div class="spread">
+          <button class="btn btn--ghost" id="cancelBuilderBtn" type="button">Cancel</button>
+          <button class="btn btn--primary" id="saveQuizBtn" type="button">Save quiz</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="/js/util.js"></script>
+  <script src="/js/host.js"></script>
+</body>
+</html>
